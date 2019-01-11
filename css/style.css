@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+header.encabezado {
+    position: fixed;
+    background-color: tomato;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: .3s linear; 
+}
+
+/* Clase añadida */
+
+.adicional {
+    background-color: #C3C3C1;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    transition: .3s linear;
+    height: 4rem; 
+}
+
+div.contenedor-encabezado {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; 
+}
+
+div.logo {
+    float: left;
+    margin-left: 3rem; 
+}
+
+div.logo img.tierra-virgen {
+    height: auto;
+    max-width: 100%;
+    transition: 0.3s ease-in-out;
+    width: 80px;
+}
+
+.small-bar {
+    height: auto;
+    max-width: 100%;
+    transition: 0.3s ease-in-out;
+    width: 60px;
+}
+
+ul.listado {
+    float: right;
+    margin-right: 3rem;
+    transition: 0.3s ease-in-out;
+    margin-top: 2.5rem;
+}
+
+ul.alternativo {
+    float: right;
+    margin-right: 3rem;
+    transition: 0.3s ease-in-out;
+    margin-top : 1.2rem;
+}
+
+ul.listado li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1rem;  
+}
+
+ul.listado li a.enlace {
+    color: #0E1D2B;
+    transition-duration: 0.5s;  
+    text-decoration: none
+}
+
+ul.listado li a.enlace:hover {
+    color: white;   
+}
+
+ul.alternativo li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1rem;  
+}
+
+ul.alternativo li a.enlace {
+    color: #0E1D2B;
+    transition-duration: 0.5s;  
+    text-decoration: none
+}
+
+ul.alternativo li a.enlace:hover {
+    color: white;   
+}
+
+div.menu-movil {
+    display: none; 
+}
+
+div.contenedor-cuerpo {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    top: 6rem;
+}
+
+h1.titulo {
+    margin-top: 3rem; 
+    text-align: center; 
+}
+
+div.tarjeta {
+    width: 28%;
+    min-width: 280px;
+    display: inline-block;
+    background-color: #D1D1E8;
+    padding: 0 1rem;
+    -webkit-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 22px -5px rgba(0,0,0,0.75);
+    border-radius: 2px;
+    margin: 2rem 0 2rem 1rem;   
+}
+
+h2.subtitulo {
+    text-align: center; 
+}
+
+@media (max-width: 768px) {
+
+    header.encabezado {
+        background-color: tomato;
+        height: 4rem; 
+    }
+
+    .adicional {
+        background-color: tomato;
+    }
+
+    div.logo img.tierra-virgen {
+        width: 50px; 
+        height: auto;
+        max-width: 100%;
+    }
+
+    div.menu-movil {
+        float: right;
+        display: block;
+        margin-right: 3rem;
+        margin-top: 1rem;
+    }
+
+    i#icono-barras {
+        color: white;
+        font-size: 2rem;
+    }
+
+    ul.listado {
+        opacity: 0;
+        display: block;
+        width: 100%;
+        margin: -10px auto 0 auto;
+        height: 100vh;
+        background-color: #000;
+        transition: .5s ease-in-out;
+    }
+
+    ul.listado li {
+        display: block;
+        text-align: center;
+        padding: 1rem 0; 
+    }
+
+    ul.listado li a.enlace {
+        color: white;
+    }
+
+    div.tarjeta {
+        width: 80%;
+        display: block;
+        padding: 1rem 1rem;
+        margin: 2rem auto;  
+    }
+}
+
+/* Lo más conveniente es sólo agregar clases adiciones, para que éstas sean removidas únicamente, de lo contrario, se duplica mucho
+código en CSS */
+
+/* Se tiene que colocar en OPACITY para que las animaciones funcionen */
